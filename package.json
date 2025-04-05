@@ -1,7 +1,7 @@
 {
   "name": "@kozmonot/pubsub-manager",
   "version": "1.0.0",
-  "description": "A simple and lightweight Publish/Subscribe (PubSub) utility for decoupled communication in JavaScript and TypeScript applications. Ideal for managing events between modules without direct dependencies.",
+  "description": "A simple and lightweight Publish/Subscribe (PubSub) utility for decoupled communication. Ideal for managing events between modules without direct dependencies.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
