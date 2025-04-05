@@ -1,4 +1,5 @@
 export class PubSub {
+
     private _listeners = {} as { [K in keyof IPubSubModel]: any[] };
 
     public subscribe<T extends keyof IPubSubModel>(
