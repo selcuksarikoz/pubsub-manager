@@ -1,6 +1,11 @@
-# @kozmonot/pubsub-manager
+# Publish - Subscribe for Javascript/Typescript
+
+[![NPM Version](https://img.shields.io/npm/v/@kozmonot/pubsub-manager)](https://www.npmjs.com/package/@kozmonot/pubsub-manager)
 
 A simple and lightweight Publish/Subscribe (PubSub) utility for decoupled communication in JavaScript and TypeScript applications. Ideal for managing events between modules without direct dependencies.
+
+## Demo
+https://pubsub-manager.vercel.app/
 
 ## Overview
 
