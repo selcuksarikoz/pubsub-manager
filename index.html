@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PubSub Example (Inline)</title>
+  <style>
+    #app {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    #message-area {
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #message-area p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>PubSub Example (Inline)</h1>
+  <div id="message-area"></div>
+  <button id="publish-button">Publish Message</button>
+</div>
+
+<script type="module">
+  import {pubSub} from "./src"
+
+  // Get references to the HTML elements
+  const messageArea = document.getElementById('message-area');
+  const publishButton = document.getElementById('publish-button');
+
+  // Subscribe to the 'new-message' event
+  pubSub.subscribe('new-message', (data) => {
+    if (messageArea) {
+      const messageElement = document.createElement('p');
+      messageElement.textContent = `Received: ${data.text}`;
+      messageArea.appendChild(messageElement);
+    }
+  });
+
+  // Add an event listener to the button to publish a message
+  if (publishButton) {
+    publishButton.addEventListener('click', () => {
+      const newMessage = `Hello from the button at ${new Date().toLocaleTimeString()}!`;
+      pubSub.publish('new-message', { text: newMessage });
+    });
+  }
+
+  // Initial message on load (optional)
+  document.addEventListener('DOMContentLoaded', () => {
+    pubSub.publish('new-message', { text: 'Page loaded.' });
+  });
+</script>
+</body>
+</html>

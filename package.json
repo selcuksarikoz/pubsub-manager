@@ -1,0 +1,56 @@
+{
+  "name": "@kozmonot/pubsub-manager",
+  "version": "1.0.0",
+  "description": "A simple and lightweight Publish/Subscribe (PubSub) utility for decoupled communication in JavaScript and TypeScript applications. Ideal for managing events between modules without direct dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "prepare": "npm run build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "jsdom": "^26.0.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-static-copy": "^2.3.0",
+    "vitest": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selcuksarikoz/pubsub-manager.git"
+  },
+  "keywords": [
+    "pubsub",
+    "publish",
+    "subscribe",
+    "event",
+    "messaging",
+    "decoupling",
+    "communication",
+    "typescript",
+    "javascript",
+    "utility",
+    "frontend",
+    "client-side"
+  ],
+  "author": "Selcuk Sarikoz <benimpostahesabim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selcuksarikoz/pubsub-manager/issues"
+  },
+  "homepage": "https://github.com/selcuksarikoz/pubsub-manager#readme"
+
+}
+
