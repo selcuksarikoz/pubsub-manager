@@ -170,4 +170,3 @@ Make sure to keep this interface updated with all the events you intend to use i
 -   **Over-publishing:** Be mindful of publishing too many events, which can potentially lead to performance issues if many listeners are involved.
 
 This `README.md` provides a good starting point for understanding and using the `@kozmonot/pubsub-manager` package in both React and Vanilla JavaScript environments. Remember to adjust the event types according to your specific application needs.
-```
